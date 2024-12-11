@@ -35,7 +35,7 @@ Model: Decision Tree Regressor
 
 quantitative: it will use all the nutrient columns as-is
 
-This model has a test root mean squared error of about 0.69 which is a good first start
+This model has a test root mean squared error of about 0.85 which is a good first start
 
 ## Final Model
 nominal: It will use `CountVectorizer` (with `binary=True` and `stop_words='english'` to disregard common English words) on the name column to see which words correspond to different average ratings.
@@ -47,6 +47,6 @@ I did a grid search with `cv=5` to find the best `max_depth` and it turned out t
 ## Fairness Analysis
 I want to know if my model is fair and predicts as good for both long and short cooking times.
 
-Null Hypothesis: Our model is fair. Its R^2 is the roughly the same for long and short recipes, and any differences are due to random chance.
+Null Hypothesis: Our model is fair. Its R^2 is roughly the same for long (>90 mins) and short(<=90 mins) recipes, and any differences are due to random chance.
 
-Alternative Hypothesis: Our model is unfair. it performs better for ... recipes
+Alternative Hypothesis: Our model is unfair. it performs better for shorter recipes
