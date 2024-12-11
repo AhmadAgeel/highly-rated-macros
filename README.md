@@ -50,3 +50,9 @@ I want to know if my model is fair and predicts as good for both long and short 
 Null Hypothesis: Our model is fair. Its R^2 is roughly the same for long (>90 mins) and short(<=90 mins) recipes, and any differences are due to random chance.
 
 Alternative Hypothesis: Our model is unfair. it performs better for shorter recipes
+
+Test statistic: difference in means
+
+Significance level: 0.05
+
+The p-value was 0.003 < 0.05  so we reject the null in favor of the alternative
